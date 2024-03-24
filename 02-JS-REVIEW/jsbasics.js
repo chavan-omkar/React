@@ -188,15 +188,27 @@ console.log(newGenre);
 // const updatedBook = {...book,moviePublicationDate: "2001-12-19"};
 const updatedBook = 
 { ...book, 
+
+   //Adding new property
+  moviePublicationDate: "2001-12-19" ,
   //overriding existing property
-  pages: 40, 
-  //Adding new property
-  moviePublicationDate: "2001-12-19" };
+  pages: 1210,
+}; 
 updatedBook;
 
 /*
 template literals are used to hold some javascript expression
 */
 
-const summary = `${title}, is a ${pages} page long book written by  ${author} and published in  ${publicationDate.split("-")[0]}`;
-summary
+const summary = `${title}, is a ${pages} page long book written by ${
+  author} and published in  ${publicationDate.split("-")[0]}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`;
+summary;
+
+// Ternary operators
+
+const pageRange =  pages > 1000 ? "over a thousand" : "less than a 1000";
+pageRange;
+
+console.log(`The book has ${pageRange } pages`)
+
+
